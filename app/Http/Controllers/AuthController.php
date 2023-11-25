@@ -98,11 +98,11 @@ class AuthController extends Controller
         }
     }
 
-    public function loadDashboard()
+    public function studentExams()
     {
         $exams = Exam::where('plan',0)->with('subjects')->orderBy('date','DESC')->get();
         //where('plan',0)->
-        return view('student.dashboard',['exams'=>$exams]);
+        return view('student.studentExams',['exams'=>$exams]);
     }
 
     public function adminProfile()
@@ -110,30 +110,6 @@ class AuthController extends Controller
         $userData = Auth::user();
         return view('admin.profile', compact('userData'));
     }
-
-    //public function editProfile(Request $request)
-    //{
-        //try {
-			//$user = Auth::user();
-
-			//if ($request->hasFile('profile_pic')) {
-				//$uploadedFile = $request->file('profile_pic');
-				
-				//$originalFileName = $uploadedFile->getClientOriginalName();
-
-				//$path = $uploadedFile->storeAs('public', $originalFileName);
-
-				//Log::info('Stored File Name:', ['storedFileName' => $originalFileName]);
-
-				//$user->profile_pic = $originalFileName;
-				//$user->save();
-			//}
-
-			//return response()->json(['success' => true, 'msg' => "Profile Updated Successfully!"]);
-		//} catch (\Exception $e) {
-			//return response()->json(['success' => false, 'msg' => $e->getMessage()]);
-		//}
-    //}
 	public function editProfile(Request $request)
 	{
 		try {
@@ -279,6 +255,177 @@ class AuthController extends Controller
 
         // Pass the data to your Blade view
         return view('admin.dashboard', compact('subjectCount', 'examCount', 'packageCount', 'questionCount', 'examReviewedCount', 'studentCount', 'paymentCount', 'subjects', 'subjectsWithExamCount', 'chartData', 'reviewedCount', 'notReviewedCount', 'paidExamsCount', 'freeExamsCount', 'allStudents', 'allExams', 'attemptData'));
+    }
+	
+	
+	public function studDashboard()
+	{
+		try {
+			$userId = auth()->user()->id;
+
+			// Counts
+			$freeExam = Exam::where('plan', 0)->count();
+			$paidExam = Exam::where('plan', 1)->count();
+			$package = Package::count();
+			$attemptedExamsCount = ExamAttempt::where('user_id', $userId)
+				->selectRaw('COUNT(DISTINCT exam_id) as total_attempts')
+				->value('total_attempts');
+			$topScore = ExamAttempt::where('user_id', $userId)->max('marks');
+			
+			
+			// Charts
+			$examNames = Exam::pluck('exam_name')->toArray();
+
+			$examMarks = [];
+			$attemptCounts = [];
+
+			foreach ($examNames as $examName) {
+				$highestMarks = ExamAttempt::where('user_id', $userId)
+					->whereHas('exam', function ($query) use ($examName) {
+						$query->where('exam_name', $examName);
+					})
+					->max('marks');
+
+				$examMarks[] = $highestMarks ?: 0;
+
+				$attemptCount = ExamAttempt::where('user_id', $userId)
+					->whereHas('exam', function ($query) use ($examName) {
+						$query->where('exam_name', $examName);
+					})
+					->count();
+
+				$attemptCounts[] = $attemptCount;
+			}
+			
+			//Log::info('Exam Marks:', ['examMarks' => $examMarks]);
+			//Log::info('Exam Attempts:', ['attemptCounts' => $attemptCounts]);
+			
+			//Transactions
+			$payments = ExamPayments::where('user_id', $userId)
+				->latest('created_at') // Order by the latest created_at
+				->limit(5)             // Limit the result to the latest 5
+				->get();
+
+			$paymentData = [];
+
+			foreach ($payments as $payment) {
+				// Your existing logic here...
+				$paidExamName = Exam::where('id', $payment->exam_id)->value('exam_name');
+				$transactionData = json_decode($payment->payment_details, true);
+				
+				// Check if the dictionary has 'razorpay_order_id' or 'PayerID'
+				$transactionId = '';
+				if (isset($transactionData['razorpay_order_id'])) {
+					$transactionId = $transactionData['razorpay_order_id'];
+				} elseif (isset($transactionData['PayerID'])) {
+					$transactionId = $transactionData['PayerID'];
+				}
+
+				$createdAtUTC = Carbon::parse($payment->created_at)->setTimezone('UTC');
+				$createdAtIST = $createdAtUTC->setTimezone('Asia/Kolkata');
+				
+				Carbon::setLocale('en');
+				Carbon::setToStringFormat('d-m-Y H:i:s');
+				
+				$timeAgo = $createdAtIST->diffForHumans();
+
+				$paymentData[] = [
+					'exam_name' => $paidExamName,
+					'transaction_id' => $transactionId,
+					'time_ago' => $timeAgo,
+				];
+			}
+			
+
+			return view('student.dashboard', compact('freeExam', 'paidExam', 'package', 'attemptedExamsCount', 'topScore', 'examNames', 'examMarks', 'paymentData', 'attemptCounts'));
+		} catch (\Exception $e) {
+			return response()->json(['success' => false, 'msg' => $e->getMessage()]);
+		}
+	}
+
+	
+	public function studProfile()
+    {
+        $userData = Auth::user();
+        return view('student.profile', compact('userData'));
+    }
+
+    public function studEditProfile(Request $request)
+    {
+        try {
+			$user = Auth::user();
+
+			// Get the existing user data
+			$userData = User::find($user->id);
+
+			if ($request->hasFile('profile_pic')) {
+				// Handle profile picture update
+				$uploadedFile = $request->file('profile_pic');
+				$originalFileName = $uploadedFile->getClientOriginalName();
+
+				// Check if an image with the same name already exists
+				if (Storage::exists("public/{$originalFileName}")) {
+					return response()->json(['success' => false, 'msg' => 'Image with the same name already exists.']);
+				}
+
+				// Check if the filename is used by another user
+				$filenameInUse = User::where('profile_pic', $originalFileName)
+					->where('id', '!=', $user->id)
+					->exists();
+
+				if ($filenameInUse) {
+					return response()->json(['success' => false, 'msg' => 'Filename is already used by another user. Please upload another image.']);
+				}
+
+				// Store the new image in the storage/app/public directory with the desired file name
+				$path = $uploadedFile->storeAs('public', $originalFileName);
+
+				Log::info('Stored File Name:', ['storedFileName' => $originalFileName]);
+
+				// Update the user's profile_pic field in the database
+				$userData->profile_pic = $originalFileName;
+			}
+
+			// Handle name update
+			$newName = $request->input('name');
+			if ($newName && $newName !== $userData->name) {
+				$userData->name = $newName;
+			}
+
+			// Handle email update
+			$newEmail = $request->input('email');
+			if ($newEmail && $newEmail !== $userData->email) {
+				// Check for email format and uniqueness
+				if (filter_var($newEmail, FILTER_VALIDATE_EMAIL) && User::where('email', $newEmail)->doesntExist()) {
+					$userData->email = $newEmail;
+				} else {
+					return response()->json(['success' => false, 'msg' => 'Invalid or duplicate email address.']);
+				}
+			}
+
+			// Save the updated user data
+			$userData->save();
+
+			// Get all images associated with any user in the database
+			$existingImagesInDatabase = User::pluck('profile_pic')->all();
+
+			// Get all images in the storage directory
+			$allImages = array_map('basename', Storage::files('public'));
+
+			// Identify images to be deleted (all except the latest associated image)
+			$imagesToDelete = array_diff($allImages, [$userData->profile_pic], $existingImagesInDatabase);
+
+			foreach ($imagesToDelete as $imageToDelete) {
+				Storage::delete('public/' . $imageToDelete);
+			}
+
+			// After updating and deleting, log the list of files in the storage directory
+			Log::info('Files after update:', ['files' => Storage::files('public')]);
+
+			return response()->json(['success' => true, 'msg' => 'Profile Updated Successfully!']);
+		} catch (\Exception $e) {
+			return response()->json(['success' => false, 'msg' => $e->getMessage()]);
+		}
     }
 
     public function logout(Request $request)
