@@ -1,0 +1,32 @@
+Dep.
+
+1. composer require psr/simple-cache
+2. composer require phpoffice/phpspreadsheet --with-all-dependencies
+3. composer require maatwebsite/excel
+
+4. php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider" --tag=config
+
+5. composer require razorpay/razorpay:2.*
+6. composer require paypal/rest-api-sdk-php
+
+
+simple
+mail
+transfer
+protocol
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=anshujoshi045@gmail.com
+MAIL_PASSWORD=hwvebwzjjsykzfbs
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=anshujoshi045@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
+
+razorpay=joshianshu045@gmail.com
+paypal=
+
+Below terminal commands can be used if payment gateways don't work/or shows authentication error.
+php artisan cache:clear
+php artisan config:clear
