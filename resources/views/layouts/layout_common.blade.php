@@ -14,10 +14,10 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Edutestify | Online Examination System</title>
+	
 	
 	<!-- FAVICONS ICON -->
-	{{-- <link rel="shortcut icon" type="image/png" href="{{ asset('images/favicon.png') }}"> --}}
+	<link rel="icon" href="{{ asset('favicon/icon.png') }}" type="image/png">
 	<link href="{{ asset('vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet">
 	<link href="{{ asset('vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="{{ asset('vendor/nouislider/nouislider.min.css') }}">
@@ -26,6 +26,8 @@
 	
 	<!-- Style css -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	
+	@yield('section-head')
 </head>
 <body>
     @yield('space-work')

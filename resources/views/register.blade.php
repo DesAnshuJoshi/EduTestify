@@ -1,4 +1,9 @@
 @extends('layouts.layout_common')
+@section('section-head')
+<title>Register | EduTestify OES</title>
+<link rel="icon" href="{{ asset('favicon/icon.png') }}" type="image/png">
+@endsection
+
 @section('space-work')
 <!DOCTYPE html>
 <html lang="en" class="h-100">

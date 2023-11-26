@@ -1,5 +1,6 @@
 @extends('layouts/admin-layout')
 @section('chart-head')
+	<title>Admin Dashboard | EduTestify OES</title>
 	<script>
       window.Promise ||
         document.write(

@@ -1,4 +1,7 @@
 @extends('layouts/admin-layout')
+@section('chart-head')
+	<title>Packages | Admin EduTestify</title>
+@endsection
 @section('space-work')
 <div class="container-fluid">
     <!-- row -->

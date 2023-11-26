@@ -1,5 +1,7 @@
 @extends('layouts/student-layout')
-
+@section('chart-head')
+<title>Paid Packages | Student EduTestify</title>
+@endsection
 @section('space-work')
 
 <div class="container-fluid">

@@ -1,10 +1,6 @@
 @extends('layouts/admin-layout')
-@section('space-head')
-<style>
-.parent-class .default-select.pointer-events-none {
-    pointer-events: none !important;
-}
-</style>
+@section('chart-head')
+	<title>Exams | Admin EduTestify</title>
 @endsection
 
 @section('space-work')

@@ -1,6 +1,7 @@
 @extends('layouts/student-layout')
 @section('chart-head')
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<title>Student Dashboard | EduTestify OES</title>
 @endsection
 @section('space-work')
     <!--**********************************
@@ -133,7 +134,7 @@
 												<div class="ms-3 w-100">
 													<h4 class="fs-18 font-w600">{{ $payment['exam_name'] }}</h4>
 													<div class="d-flex justify-content-between">
-														<span class="me-auto">{{ $payment['transaction_id'] }}</span>
+														<span class="me-auto">Transaction ID: {{ $payment['transaction_id'] }}</span>
 														<span class="me-4 fs-12">{{ $payment['time_ago'] }}</span>
 													</div>
 												</div>

@@ -1,4 +1,7 @@
 @extends('layouts/admin-layout')
+@section('chart-head')
+	<title>Questions | Admin EduTestify</title>
+@endsection
 @section('space-work')
 <div class="container-fluid">
     <!-- row -->
@@ -10,7 +13,7 @@
                         <div class="bootstrap-modal">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#addQnaModal">Add Questions</button>
-                            <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#importQnaModal">Import Questions</button>
+                            <button type="button" class="btn btn-primary mb-2 float-end" data-bs-toggle="modal" data-bs-target="#importQnaModal">Import Questions</button>
                             <!-- Modal Add Qna -->
                             <div class="modal fade" id="addQnaModal" tabindex="-1" aria-labelledby="addQnaModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg modal-dialog-centered">

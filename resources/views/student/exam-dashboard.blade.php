@@ -1,5 +1,7 @@
 @extends('layouts/layout_common')
-
+@section('section-head')
+<title>{{ $exam[0]['exam_name'] }} Examination | Student EduTestify</title>
+@endsection
 @section('space-work')
 
     @php 

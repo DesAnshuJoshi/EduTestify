@@ -1,5 +1,7 @@
 @extends('layouts/admin-layout')
-
+@section('chart-head')
+	<title>Payments | Admin EduTestify</title>
+@endsection
 @section('space-work')
     <div class="container-fluid">
          <!-- row -->

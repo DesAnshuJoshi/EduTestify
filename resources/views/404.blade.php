@@ -1,5 +1,9 @@
 @extends('layouts/layout_common')
 
+@section('section-head')
+<title>404 | EduTestify OES</title>
+@endsection
+
 @section('space-work')
 <div class="vh-100">
     <div class="authincation h-100">
