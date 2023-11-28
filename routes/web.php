@@ -93,7 +93,8 @@ Route::group(['middleware'=>['web', 'checkAdmin']], function(){
     //crud packages
     Route::get('/admin/dashboard-package',[AdminController::class,'loadPackageDashboard'])->name('packageDashboard');
     Route::post('/add-package',[AdminController::class,'addPackage'])->name('addPackage');
-    Route::get('/delete-package',[AdminController::class,'deletePackage'])->name('deletePackage');
+    //Route::get('/delete-package',[AdminController::class,'deletePackage'])->name('deletePackage');
+	Route::post('/delete-package', [AdminController::class, 'deletePackage'])->name('deletePackage');
     Route::post('/edit-package',[AdminController::class,'editPackage'])->name('editPackage');
 
     //payment details

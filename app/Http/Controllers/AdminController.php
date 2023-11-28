@@ -584,17 +584,28 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function deletePackage(Request $request)
-    {
-        try {
+    //public function deletePackage(Request $request)
+    //{
+        //try {
 
-            Package::where('id',$request->id)->delete();
+            //Package::where('id',$request->id)->delete();
 
-            return response()->json(['success'=>true,'msg'=>'Package deleted Successfully!']);
-        } catch (\Exception $e) {
-            return response()->json(['success'=>false,'msg'=>$e->getMessage()]);
-        }
-    }
+          //  return response()->json(['success'=>true,'msg'=>'Package deleted Successfully!']);
+        //} catch (\Exception $e) {
+        //    return response()->json(['success'=>false,'msg'=>$e->getMessage()]);
+      //  }
+    //}
+	public function deletePackage(Request $request)
+	{
+		try {
+			Package::where('id', $request->id)->delete();
+			// You can add additional logic for related data deletion if needed
+
+			return response()->json(['success' => true, 'msg' => 'Package deleted successfully!']);
+		} catch (\Exception $e) {
+			return response()->json(['success' => false, 'msg' => $e->getMessage()]);
+		}
+	}
 
     public function editPackage(Request $request)
     {

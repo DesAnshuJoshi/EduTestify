@@ -87,6 +87,49 @@
                                     </div>
                                 </div>
                             </div>
+							<!-- Modal Delete Subject -->
+							<!--<div class="modal fade" id="deletePackageModal" tabindex="-1" aria-labelledby="deletePackageModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<form action="" id="deletePackage">
+											@csrf
+											<div class="modal-header">
+												<h5 class="modal-title" id="deletePackageModalLabel">Delete Package</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p id="subjectToDeleteText">Are you sure to delete <span id="packageToDelete"></span>?</p>
+												<input type="hidden" name="id" id="delete_package_id">
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary light" data-bs-dismiss="modal">Close</button>
+												<button type="submit" class="btn btn-danger">Delete</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>-->
+							<div class="modal fade" id="deletePackageModal" tabindex="-1" aria-labelledby="deletePackageModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<form action="{{ route('deletePackage') }}" method="POST" id="deletePackageForm">
+											@csrf
+											<div class="modal-header">
+												<h5 class="modal-title" id="deletePackageModalLabel">Delete Package</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p id="packageToDeleteText">Are you sure to delete <span id="packageToDelete"></span>?</p>
+												<input type="hidden" name="id" id="delete_package_id">
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary light" data-bs-dismiss="modal">Close</button>
+												<button type="submit" class="btn btn-danger deletePackage">Delete</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -135,11 +178,16 @@
                                                     <button class="btn btn-primary shadow btn-xs sharp me-1 editPackage" data-bs-toggle="modal" data-bs-target="#editPackageModal" data-obj="{{ $package }}"><i class="fas fa-pencil-alt"></i></button>
                                                 </div>
                                             </td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="d-flex">
-                                                    <button class="btn btn-danger shadow btn-xs sharp deletePackage" data-id="{{ $package->id }}"><i class="fa fa-trash"></i></button>
+                                                    <button class="btn btn-danger shadow btn-xs sharp deletePackage" data-bs-toggle="modal" data-bs-target="#deletePackageModal" data-id="{{ $package->id }}"><i class="fa fa-trash"></i></button>
                                                 </div>
-                                            </td>
+                                            </td>-->
+											<td>
+												<div class="d-flex">
+													<button class="btn btn-danger shadow btn-xs sharp" data-bs-toggle="modal" data-bs-target="#deletePackageModal" data-id="{{ $package->id }}" data-name="{{ $package->name }}"><i class="fa fa-trash"></i></button>
+												</div>
+											</td>
                                         </tr>  
                                     @endforeach
                                     @else
@@ -187,29 +235,57 @@
             }
 
         });
+		
+		
+		// Delete package
+		$('.deletePackage').click(function () {
+			var obj = $(this);
+			var id = $(this).attr('data-id');
 
-        $('.deletePackage').click(function(){
+			$.ajax({
+				url: "{{ route('deletePackage') }}",
+				type: "POST",
+				data: { id: id, _token: '{{ csrf_token() }}' },
+				success: function (response) {
+					if (response.success) {
+						location.reload();
+					} else {
+						alert(response.msg);
+					}
+				}
+			});
+		});
 
-            var obj = $(this);
-            var id = $(this).attr('data-id');
+		// Modal events
+		$('#deletePackageModal').on('show.bs.modal', function (event) {
+			var button = $(event.relatedTarget);
+			var pack = button.data('name');
 
-            $.ajax({
-                url:"{{ route('deletePackage') }}",
-                type:"GET",
-                data:{id:id},
-                success:function(response) {
-                    if(response){
-                        $(obj).parent().parent().remove();
-                        alert(response.msg);
-                        location.reload();
-                    }
-                    else{
-                        alert(response.msg);
-                    }
-                }
-            });
+			$('#packageToDeleteText').text('Are you sure to delete "' + pack + '" ?');
+			$('#delete_package_id').val(button.data('id'));
+		});
 
-        });
+		$('#deletePackageForm').submit(function (e) {
+			e.preventDefault();
+
+			var formData = $(this).serialize();
+
+			$.ajax({
+				url: "{{ route('deletePackage') }}",
+				type: "POST",
+				data: formData,
+				success: function (data) {
+					if (data.success) {
+						location.reload();
+					} else {
+						alert(data.msg);
+					}
+				}
+			});
+		});
+			
+		
+		
 
         $('.editPackage').click(function(){
 
