@@ -59,12 +59,18 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <div class="input-group">
-                                                    <div class="form-file">
-                                                        <input type="file" class="form-file-input form-control" name="file" id="fileupload" required accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet ,application/vnd.ms.excel">\
-                                                        {{-- Add Option to download template and use it to add question. --}}
-                                                    </div>
-                                                </div>
+                                                <div class="row">
+													<div class="col-12 mb-3">
+														<p class="mb-0">Use the template to upload: <a href="{{ asset('template.xlsx') }}" download="template.xlsx" class="badge badge-primary p-2"><i class="fas fa-download ml-2"></i>&nbsp;Download</a></p>
+													</div>
+													<div class="col-12">
+														<div class="input-group">
+															<div class="form-file">
+																<input type="file" class="form-file-input form-control" name="file" id="fileupload" required accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet ,application/vnd.ms.excel">
+															</div>
+														</div>
+													</div>
+												</div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-primary light" data-bs-dismiss="modal">Close</button>

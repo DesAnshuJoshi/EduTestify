@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2023 at 06:50 PM
+-- Generation Time: Dec 01, 2023 at 05:12 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -41,79 +41,136 @@ CREATE TABLE `answers` (
 --
 
 INSERT INTO `answers` (`id`, `questions_id`, `answer`, `is_correct`, `created_at`, `updated_at`) VALUES
-(5, 2, 'SRK', 1, '2023-10-02 06:34:09', '2023-10-02 06:34:09'),
-(6, 2, 'Hritik Roshan', 0, '2023-10-02 06:34:09', '2023-10-02 06:34:09'),
-(7, 2, 'Shahid Kapoor', 0, '2023-10-02 06:34:09', '2023-10-02 06:34:09'),
-(8, 2, 'Varun Dhawan', 0, '2023-10-02 06:34:09', '2023-10-02 06:34:09'),
-(9, 3, 'London', 1, '2023-10-02 06:36:07', '2023-10-02 06:36:07'),
-(10, 3, 'Berlin', 0, '2023-10-02 06:36:07', '2023-10-02 06:36:07'),
-(11, 3, 'Paris', 0, '2023-10-02 06:36:07', '2023-10-02 06:36:07'),
-(12, 3, 'Madrid', 0, '2023-10-02 06:36:07', '2023-10-02 06:36:07'),
-(13, 4, 'Oxygen', 1, '2023-10-02 06:36:43', '2023-10-02 06:36:43'),
-(14, 4, 'Carbon dioxide', 0, '2023-10-02 06:36:43', '2023-10-02 06:36:43'),
-(15, 4, 'Nitrogen', 0, '2023-10-02 06:36:43', '2023-10-02 06:36:43'),
-(16, 4, 'Hydrogen', 0, '2023-10-02 06:36:43', '2023-10-02 06:36:43'),
-(17, 5, 'George Orwell', 0, '2023-10-02 06:37:17', '2023-10-02 06:37:17'),
-(18, 5, 'Harper Lee', 1, '2023-10-02 06:37:17', '2023-10-02 06:37:17'),
-(19, 5, 'J.K. Rowling', 0, '2023-10-02 06:37:17', '2023-10-02 06:37:17'),
-(20, 5, 'Charles Dickens', 0, '2023-10-02 06:37:17', '2023-10-02 06:37:17'),
-(21, 6, 'Go', 0, '2023-10-02 06:37:54', '2023-10-02 10:16:32'),
-(22, 6, 'Au', 0, '2023-10-02 06:37:54', '2023-10-02 10:16:32'),
-(23, 6, 'Ag', 0, '2023-10-02 06:37:54', '2023-10-02 10:16:32'),
-(24, 6, 'Ge', 0, '2023-10-02 06:37:54', '2023-10-02 10:16:32'),
-(25, 7, 'Venus', 0, '2023-10-02 06:38:24', '2023-10-02 06:38:24'),
-(26, 7, 'Earth', 0, '2023-10-02 06:38:24', '2023-10-02 06:38:24'),
-(27, 7, 'Mars', 1, '2023-10-02 06:38:24', '2023-10-02 06:38:24'),
-(28, 7, 'Jupiter', 0, '2023-10-02 06:38:24', '2023-10-02 06:38:24'),
-(29, 8, 'Elephant', 0, '2023-10-02 06:38:59', '2023-10-02 06:38:59'),
-(30, 8, 'Giraffe', 0, '2023-10-02 06:38:59', '2023-10-02 06:38:59'),
-(31, 8, 'Blue Whale', 1, '2023-10-02 06:38:59', '2023-10-02 06:38:59'),
-(32, 8, 'Polar Bear', 0, '2023-10-02 06:38:59', '2023-10-02 06:38:59'),
-(33, 9, 'Vincent van Gogh', 0, '2023-10-02 06:39:28', '2023-10-02 06:39:28'),
-(34, 9, 'Leonardo da Vinci', 1, '2023-10-02 06:39:28', '2023-10-02 06:39:28'),
-(35, 9, 'Pablo Picasso', 0, '2023-10-02 06:39:28', '2023-10-02 06:39:28'),
-(36, 9, 'Michelangelo', 0, '2023-10-02 06:39:28', '2023-10-02 06:39:28'),
-(37, 10, 'Red', 0, '2023-10-02 06:39:57', '2023-10-02 06:39:57'),
-(38, 10, 'Green', 0, '2023-10-02 06:39:57', '2023-10-02 06:39:57'),
-(39, 10, 'Blue', 1, '2023-10-02 06:39:57', '2023-10-02 06:39:57'),
-(40, 10, 'Yellow', 0, '2023-10-02 06:39:57', '2023-10-02 06:39:57'),
-(41, 11, '0', 0, '2023-10-02 06:40:16', '2023-10-02 06:40:16'),
-(42, 11, '1', 1, '2023-10-02 06:40:16', '2023-10-02 06:40:16'),
-(43, 11, '2', 0, '2023-10-02 06:40:16', '2023-10-02 06:40:16'),
-(44, 11, '3', 0, '2023-10-02 06:40:16', '2023-10-02 06:40:16'),
-(45, 12, 'Oxygen', 0, '2023-10-02 06:40:46', '2023-10-02 06:40:46'),
-(46, 12, 'Carbon dioxide', 0, '2023-10-02 06:40:46', '2023-10-02 06:40:46'),
-(47, 12, 'Chlorofluorocarbons', 1, '2023-10-02 06:40:46', '2023-10-02 06:40:46'),
-(48, 12, 'Nitrogen', 0, '2023-10-02 06:40:46', '2023-10-02 06:40:46'),
-(49, 13, 'Mitochondria', 1, '2023-10-02 06:41:14', '2023-10-13 07:10:40'),
-(50, 13, 'Nucleus', 0, '2023-10-02 06:41:14', '2023-10-13 07:10:40'),
-(51, 13, 'Endoplasmic reticulum', 0, '2023-10-02 06:41:14', '2023-10-13 07:10:40'),
-(52, 13, 'Golgi apparatus', 0, '2023-10-02 06:41:14', '2023-10-13 07:10:41'),
-(53, 14, 'Isaac Newton', 1, '2023-10-02 06:42:02', '2023-10-02 06:42:02'),
-(54, 14, 'Galileo Galilei', 0, '2023-10-02 06:42:02', '2023-10-02 06:42:02'),
-(55, 14, 'Albert Einstein', 0, '2023-10-02 06:42:02', '2023-10-02 06:42:02'),
-(71, 16, 'Object Relational Mapping', 1, '2023-10-03 10:40:12', '2023-10-03 10:40:12'),
-(72, 16, 'Open Remote Mapping', 0, '2023-10-03 10:40:12', '2023-10-03 10:40:12'),
-(73, 16, 'Online Reputation Management', 0, '2023-10-03 10:40:12', '2023-10-03 10:40:12'),
-(74, 16, 'Operational Risk Management', 0, '2023-10-03 10:40:12', '2023-10-03 10:40:12'),
-(75, 17, 'if', 0, '2023-10-03 18:02:40', '2023-10-03 12:34:11'),
-(76, 17, 'if…else', 0, '2023-10-03 18:02:40', '2023-10-03 12:34:11'),
-(77, 17, 'if…elif…else', 1, '2023-10-03 18:02:40', '2023-10-03 12:34:11'),
-(78, 17, 'all of these', 0, '2023-10-03 18:02:40', '2023-10-03 12:34:11'),
-(79, 17, 'both a & b', 0, '2023-10-03 18:02:40', '2023-10-03 12:34:11'),
-(80, 17, 'none of above', 0, '2023-10-03 18:02:40', '2023-10-03 12:34:11'),
-(81, 18, 'SRC', 1, '2023-10-03 18:02:40', '2023-10-08 06:29:00'),
-(82, 18, 'FRAME', 0, '2023-10-03 18:02:40', '2023-10-08 06:29:00'),
-(83, 18, 'HEIGHT', 0, '2023-10-03 18:02:40', '2023-10-08 06:29:00'),
-(84, 18, 'BORDER', 0, '2023-10-03 18:02:40', '2023-10-08 06:29:00'),
-(85, 19, 'Chat', 0, '2023-10-03 18:02:40', '2023-10-03 18:02:40'),
-(86, 19, 'Google Drive', 1, '2023-10-03 18:02:40', '2023-10-03 18:02:40'),
-(87, 19, 'E-Mail', 0, '2023-10-03 18:02:40', '2023-10-03 18:02:40'),
-(88, 19, 'VoIP', 0, '2023-10-03 18:02:40', '2023-10-03 18:02:40'),
-(89, 20, 'Column Based', 0, '2023-10-09 14:40:41', '2023-10-09 14:40:41'),
-(90, 20, 'Document Based', 1, '2023-10-09 14:40:41', '2023-10-09 14:40:41'),
-(91, 20, 'Graph Based', 0, '2023-10-09 14:40:42', '2023-10-09 14:40:42'),
-(92, 20, 'Key Value Based', 0, '2023-10-09 14:40:42', '2023-10-09 14:40:42');
+(1, 1, 'To catch exceptions', 0, '2023-12-01 13:44:58', '2023-12-01 13:44:58'),
+(2, 1, 'To execute code regardless of whether an exception occurs or not', 1, '2023-12-01 13:44:59', '2023-12-01 13:44:59'),
+(3, 1, 'To handle checked exceptions', 0, '2023-12-01 13:44:59', '2023-12-01 13:44:59'),
+(4, 1, 'To terminate the program', 0, '2023-12-01 13:44:59', '2023-12-01 13:44:59'),
+(5, 2, 'ArrayList is synchronized, LinkedList is not', 0, '2023-12-01 13:45:00', '2023-12-01 13:45:51'),
+(6, 2, 'ArrayList is faster for random access, LinkedList is faster for insertions and deletions', 1, '2023-12-01 13:45:00', '2023-12-01 13:45:51'),
+(7, 2, 'LinkedList is a resizable array, ArrayList is a linked list', 0, '2023-12-01 13:45:00', '2023-12-01 13:45:51'),
+(8, 2, 'There is no difference', 0, '2023-12-01 13:45:00', '2023-12-01 13:45:51'),
+(9, 3, 'Singleton', 0, '2023-12-01 13:46:26', '2023-12-01 13:46:26'),
+(10, 3, 'Prototype', 0, '2023-12-01 13:46:26', '2023-12-01 13:46:26'),
+(11, 3, 'Factory Method', 1, '2023-12-01 13:46:27', '2023-12-01 13:46:27'),
+(12, 3, 'Abstract Factory', 0, '2023-12-01 13:46:27', '2023-12-01 13:46:27'),
+(13, 4, 'To manage database connections', 0, '2023-12-01 13:47:16', '2023-12-01 13:47:16'),
+(14, 4, 'To define a standard for ORM (Object-Relational Mapping)', 1, '2023-12-01 13:47:17', '2023-12-01 13:47:17'),
+(15, 4, 'To handle user authentication', 0, '2023-12-01 13:47:17', '2023-12-01 13:47:17'),
+(16, 4, 'To create graphical user interfaces', 0, '2023-12-01 13:47:17', '2023-12-01 13:47:17'),
+(17, 5, 'To handle HTTP requests', 0, '2023-12-01 13:47:54', '2023-12-01 13:47:54'),
+(18, 5, 'To manage persistence and business logic', 1, '2023-12-01 13:47:54', '2023-12-01 13:47:54'),
+(19, 5, 'To create web pages', 0, '2023-12-01 13:47:54', '2023-12-01 13:47:54'),
+(20, 5, 'To handle JavaScript functionality', 0, '2023-12-01 13:47:54', '2023-12-01 13:47:54'),
+(21, 6, 'To manage Java source code', 0, '2023-12-01 13:48:31', '2023-12-01 13:48:31'),
+(22, 6, 'To provide a messaging system between Java applications', 1, '2023-12-01 13:48:31', '2023-12-01 13:48:31'),
+(23, 6, 'To create graphical user interfaces', 0, '2023-12-01 13:48:31', '2023-12-01 13:48:31'),
+(24, 6, 'To handle database connections', 0, '2023-12-01 13:48:31', '2023-12-01 13:48:31'),
+(25, 7, 'To manage database migrations', 0, '2023-12-01 13:49:12', '2023-12-01 13:49:12'),
+(26, 7, 'To generate code snippets for web pages', 0, '2023-12-01 13:49:12', '2023-12-01 13:49:12'),
+(27, 7, 'To create and manage Laravel projects', 1, '2023-12-01 13:49:12', '2023-12-01 13:49:12'),
+(28, 7, 'To handle user authentication', 0, '2023-12-01 13:49:12', '2023-12-01 13:49:12'),
+(29, 8, 'To handle database queries', 0, '2023-12-01 13:49:49', '2023-12-01 13:49:49'),
+(30, 8, 'To define routes in a Laravel application', 0, '2023-12-01 13:49:49', '2023-12-01 13:49:49'),
+(31, 8, 'To write and manage views in a concise syntax', 1, '2023-12-01 13:49:49', '2023-12-01 13:49:49'),
+(32, 8, 'To create RESTful APIs', 0, '2023-12-01 13:49:49', '2023-12-01 13:49:49'),
+(33, 9, 'Many-to-Many', 1, '2023-12-01 13:50:28', '2023-12-01 13:50:28'),
+(34, 9, 'One-to-One', 0, '2023-12-01 13:50:28', '2023-12-01 13:50:28'),
+(35, 9, 'One-to-Many', 0, '2023-12-01 13:50:28', '2023-12-01 13:50:28'),
+(36, 9, 'Belongs-To-Many', 0, '2023-12-01 13:50:28', '2023-12-01 13:50:28'),
+(37, 10, 'To handle HTTP requests', 0, '2023-12-01 13:51:13', '2023-12-01 13:51:13'),
+(38, 10, 'To manage database migrations', 0, '2023-12-01 13:51:13', '2023-12-01 13:51:13'),
+(39, 10, 'To provide an interface for querying the database using an object-oriented syntax', 1, '2023-12-01 13:51:13', '2023-12-01 13:51:13'),
+(40, 10, 'To define routes in a Laravel application', 0, '2023-12-01 13:51:13', '2023-12-01 13:51:13'),
+(41, 11, 'To create and manage database tables', 0, '2023-12-01 13:51:55', '2023-12-01 13:51:55'),
+(42, 11, 'To define routes for API endpoints', 0, '2023-12-01 13:51:55', '2023-12-01 13:51:55'),
+(43, 11, 'To filter HTTP requests entering the application', 1, '2023-12-01 13:51:55', '2023-12-01 13:51:55'),
+(44, 11, 'To generate code snippets for web pages', 0, '2023-12-01 13:51:55', '2023-12-01 13:51:55'),
+(45, 12, 'php artisan serve', 0, '2023-12-01 13:52:37', '2023-12-01 13:52:37'),
+(46, 12, 'php artisan migrate:make', 0, '2023-12-01 13:52:38', '2023-12-01 13:52:38'),
+(47, 12, 'php artisan new:migration', 0, '2023-12-01 13:52:38', '2023-12-01 13:52:38'),
+(48, 12, 'php artisan make:migration', 1, '2023-12-01 13:52:38', '2023-12-01 13:52:38'),
+(49, 13, 'A record in a traditional relational database', 0, '2023-12-01 13:53:20', '2023-12-01 13:53:20'),
+(50, 13, 'A JSON-like data structure used to store data', 1, '2023-12-01 13:53:20', '2023-12-01 13:53:20'),
+(51, 13, 'A field in a MongoDB collection', 0, '2023-12-01 13:53:20', '2023-12-01 13:53:20'),
+(52, 13, 'A table in a relational database', 0, '2023-12-01 13:53:20', '2023-12-01 13:53:20'),
+(53, 14, 'Schema flexibility', 1, '2023-12-01 13:53:49', '2023-12-01 13:53:49'),
+(54, 14, 'Strict schema enforcement', 0, '2023-12-01 13:53:49', '2023-12-01 13:53:49'),
+(55, 14, 'Lack of support for indexing', 0, '2023-12-01 13:53:49', '2023-12-01 13:53:49'),
+(56, 14, 'Limited data storage capacity', 0, '2023-12-01 13:53:49', '2023-12-01 13:53:49'),
+(57, 15, 'It is a reserved keyword and cannot be used', 0, '2023-12-01 13:54:29', '2023-12-01 13:54:29'),
+(58, 15, 'It uniquely identifies a document within a collection', 1, '2023-12-01 13:54:30', '2023-12-01 13:54:30'),
+(59, 15, 'It represents the document\'s data type', 0, '2023-12-01 13:54:30', '2023-12-01 13:54:30'),
+(60, 15, 'It is used to define relationships between documents', 0, '2023-12-01 13:54:30', '2023-12-01 13:54:30'),
+(61, 16, 'A way to sort documents in a collection', 0, '2023-12-01 13:55:14', '2023-12-01 13:55:14'),
+(62, 16, 'A technique for dividing a large database into smaller, more manageable parts', 1, '2023-12-01 13:55:14', '2023-12-01 13:55:14'),
+(63, 16, 'A type of index used for querying', 0, '2023-12-01 13:55:14', '2023-12-01 13:55:14'),
+(64, 16, 'A method for encrypting data in MongoDB', 0, '2023-12-01 13:55:14', '2023-12-01 13:55:14'),
+(65, 17, '$sort', 0, '2023-12-01 13:55:48', '2023-12-01 13:55:48'),
+(66, 17, '$project', 0, '2023-12-01 13:55:48', '2023-12-01 13:55:48'),
+(67, 17, '$match', 0, '2023-12-01 13:55:48', '2023-12-01 13:55:48'),
+(68, 17, '$group', 1, '2023-12-01 13:55:48', '2023-12-01 13:55:48'),
+(69, 18, 'A reserved keyword in queries', 0, '2023-12-01 13:56:19', '2023-12-01 13:56:19'),
+(70, 18, 'A collection of documents', 0, '2023-12-01 13:56:19', '2023-12-01 13:56:19'),
+(71, 18, 'A data type for numeric values', 0, '2023-12-01 13:56:19', '2023-12-01 13:56:19'),
+(72, 18, 'A data structure that improves the speed of data retrieval operations', 1, '2023-12-01 13:56:19', '2023-12-01 13:56:19'),
+(73, 21, 'To create graphical user interfaces', 0, '2023-12-01 14:29:06', '2023-12-01 14:30:31'),
+(74, 21, 'To manage persistence and business logic', 0, '2023-12-01 14:29:06', '2023-12-01 14:30:31'),
+(75, 21, 'To provide a naming and directory service for Java applications', 1, '2023-12-01 14:29:06', '2023-12-01 14:30:31'),
+(76, 21, 'To handle HTTP requests', 0, '2023-12-01 14:29:06', '2023-12-01 14:30:31'),
+(78, 22, 'To manage Java source code', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:04'),
+(79, 22, 'To handle user authentication and authorization', 1, '2023-12-01 14:29:06', '2023-12-01 14:31:04'),
+(80, 22, 'To create web pages', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:04'),
+(81, 22, 'To handle database connections', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:04'),
+(83, 23, 'Enterprise JavaBeans (EJB)', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:18'),
+(84, 23, 'JavaServer Faces (JSF)', 1, '2023-12-01 14:29:06', '2023-12-01 14:31:18'),
+(85, 23, 'Java Message Service (JMS)', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:18'),
+(86, 23, 'Java Servlet', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:18'),
+(88, 24, 'To define a one-to-one relationship', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:34'),
+(89, 24, 'To define a many-to-many relationship', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:34'),
+(90, 24, 'To define a one-to-many relationship', 1, '2023-12-01 14:29:06', '2023-12-01 14:31:35'),
+(91, 24, 'To define a polymorphic relationship', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:35'),
+(93, 25, 'By using the php artisan secure command', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:50'),
+(94, 25, 'By configuring the .env file', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:50'),
+(95, 25, 'By using middleware to enforce authentication', 1, '2023-12-01 14:29:06', '2023-12-01 14:31:50'),
+(96, 25, 'By setting the appropriate permissions on the route file', 0, '2023-12-01 14:29:06', '2023-12-01 14:31:50'),
+(98, 26, 'To include a partial view', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:08'),
+(99, 26, 'To define a section of content that can be overridden in child views', 1, '2023-12-01 14:29:06', '2023-12-01 14:32:08'),
+(100, 26, 'To create a new migration', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:08'),
+(101, 26, 'To handle HTTP requests', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:08'),
+(103, 27, 'To handle HTTP requests', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:22'),
+(104, 27, 'To manage database migrations', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:22'),
+(105, 27, 'To provide storage and retrieval of data in MongoDB', 1, '2023-12-01 14:29:06', '2023-12-01 14:32:22'),
+(106, 27, 'To define routes in a MongoDB application', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:22'),
+(108, 28, 'Through the use of the WiredTiger storage engine', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:41'),
+(109, 28, 'By dividing the database into smaller parts called shards', 1, '2023-12-01 14:29:06', '2023-12-01 14:32:41'),
+(110, 28, 'By enforcing a strict schema for data storage', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:41'),
+(111, 28, 'By using the $sort aggregation pipeline stage', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:41'),
+(113, 29, 'To insert documents into a collection', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:52'),
+(114, 29, 'To update documents in a collection', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:52'),
+(115, 29, 'To retrieve documents from a collection based on a query', 1, '2023-12-01 14:29:06', '2023-12-01 14:32:53'),
+(116, 29, 'To define relationships between documents', 0, '2023-12-01 14:29:06', '2023-12-01 14:32:53'),
+(118, 30, 'if', 0, '2023-12-01 14:34:25', '2023-12-01 14:35:01'),
+(119, 30, 'if…else', 0, '2023-12-01 14:34:25', '2023-12-01 14:35:01'),
+(120, 30, 'if…elif…else', 1, '2023-12-01 14:34:25', '2023-12-01 14:35:01'),
+(121, 30, 'all of these', 0, '2023-12-01 14:34:25', '2023-12-01 14:35:01'),
+(122, 30, 'both a & b', 0, '2023-12-01 14:34:25', '2023-12-01 14:35:01'),
+(123, 30, 'none of above', 0, '2023-12-01 14:34:25', '2023-12-01 14:35:01'),
+(124, 31, 'SRC', 1, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(125, 31, 'FRAME', 0, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(126, 31, 'HEIGHT', 0, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(127, 31, 'BORDER', 0, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(128, 32, 'Chat', 0, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(129, 32, 'Google Drive', 1, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(130, 32, 'E-Mail', 0, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(131, 32, 'VoIP', 0, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(132, 33, 'ans1', 0, '2023-12-01 14:36:12', '2023-12-01 14:36:42'),
+(133, 33, 'ans2', 0, '2023-12-01 14:36:12', '2023-12-01 14:36:43'),
+(134, 33, 'ans3', 0, '2023-12-01 14:36:12', '2023-12-01 14:36:43'),
+(135, 33, 'ans4', 1, '2023-12-01 14:36:43', '2023-12-01 14:36:43'),
+(136, 34, '2000', 0, '2023-12-01 15:09:38', '2023-12-01 15:09:38'),
+(137, 34, '2003', 0, '2023-12-01 15:09:38', '2023-12-01 15:09:38'),
+(138, 34, '2010', 0, '2023-12-01 15:09:38', '2023-12-01 15:09:38'),
+(139, 34, '2007', 1, '2023-12-01 15:09:38', '2023-12-01 15:09:38');
 
 -- --------------------------------------------------------
 
@@ -142,22 +199,11 @@ CREATE TABLE `exams` (
 --
 
 INSERT INTO `exams` (`id`, `exam_name`, `subject_id`, `date`, `time`, `attempt`, `marks`, `pass_marks`, `enterance_id`, `plan`, `prices`, `created_at`, `updated_at`) VALUES
-(20, 'Demo Exam', 19, '2023-10-12', '03:00', 3, 0, 0, 'exid65242a336c3df', 0, NULL, '2023-10-09 16:28:35', '2023-10-12 06:43:10'),
-(22, 'ORM in Laravel', 18, '2023-10-12', '03:01', 2, 22.5, 0, 'exid65242bf687f4b', 0, NULL, '2023-10-09 16:36:06', '2023-10-09 11:27:45'),
-(23, 'Spring Java Demo', 1, '2023-10-12', '03:00', 2, 0, 0, 'exid6527e2fc9dd48', 0, NULL, '2023-10-12 12:13:48', '2023-10-12 12:13:48'),
-(26, 'Dummy Exam 1', 2, '2023-10-14', '01:00', 1, 0, 0, 'exid6527ef5cdc9fa', 0, NULL, '2023-10-12 13:06:36', '2023-10-12 13:06:36'),
-(27, 'Dummy Exam 2', 5, '2023-10-17', '01:00', 1, 0, 0, 'exid6527ef7a2ce43', 0, NULL, '2023-10-12 13:07:06', '2023-10-12 13:07:06'),
-(28, 'Dummy Exam 3', 7, '2023-10-24', '01:00', 1, 0, 0, 'exid6527efa6259a5', 0, NULL, '2023-10-12 13:07:50', '2023-10-12 13:07:50'),
-(29, 'Dummy Exam 4', 8, '2023-10-25', '02:00', 1, 0, 0, 'exid6527efc653050', 0, NULL, '2023-10-12 13:08:22', '2023-10-12 13:08:22'),
-(30, 'Dummy Exam 5', 9, '2023-10-21', '20:40', 1, 0, 0, 'exid6527f0055ae76', 0, NULL, '2023-10-12 13:09:25', '2023-10-12 13:09:25'),
-(31, 'Dummy Exam 6', 11, '2023-10-23', '03:40', 1, 0, 0, 'exid6527f020d59b4', 0, NULL, '2023-10-12 13:09:52', '2023-10-12 13:09:52'),
-(32, 'Dummy Exam 7', 11, '2023-10-25', '02:59', 1, 0, 0, 'exid6527f044932ab', 0, NULL, '2023-10-12 13:10:28', '2023-10-12 13:10:28'),
-(33, 'Dummy Exam 8', 13, '2023-10-30', '04:00', 1, 0, 0, 'exid6527f061d741a', 0, NULL, '2023-10-12 13:10:57', '2023-10-12 13:10:57'),
-(34, 'Demo Exam 2', 19, '2023-10-12', '01:00', 2, 5, 12, 'exid65242a4e9abdb', 0, NULL, '2023-10-09 16:29:02', '2023-10-13 01:27:00'),
-(36, 'Demo Free Exam', 19, '2023-10-23', '11:00', 1, 0, 0, 'exid652d4ad343469', 0, NULL, '2023-10-16 14:38:11', '2023-10-16 14:38:11'),
-(37, 'Demo Paid Exams', 19, '2023-10-25', '17:00', 2, 0, 0, 'exid652d4b3e9801d', 1, '{\"INR\":\"5000\",\"USD\":\"60\"}', '2023-10-16 14:39:58', '2023-10-16 11:02:13'),
-(38, 'Demo Exam Paid 2', 19, '2023-10-30', '06:00', 1, 0, 0, '', 0, NULL, '2023-10-16 16:09:12', '2023-10-16 11:02:31'),
-(39, 'Demo Exam Free 2', 19, '2023-10-30', '18:00', 1, 0, 0, 'exid652d60c63cf6d', 1, '{\"INR\":\"1000\",\"USD\":\"20\"}', '2023-10-16 16:11:50', '2023-10-16 11:04:37');
+(5, 'MongoDB Fundamentals and Application Exam', 3, '2023-12-02', '01:00', 1, 5, 10, 'exid6569e0150880c', 0, NULL, '2023-12-01 13:31:01', '2023-12-01 14:50:15'),
+(6, 'Advanced MongoDB Database Design and Querying', 3, '2023-12-02', '02:00', 2, 75, 50, 'exid6569e03e7696c', 1, '{\"INR\":\"1200\",\"USD\":\"49\"}', '2023-12-01 13:31:42', '2023-12-01 14:50:31'),
+(7, 'JavaEE Mastery Exam', 1, '2023-12-02', '01:00', 1, 15, 25, 'exid6569e0a1338bc', 0, NULL, '2023-12-01 13:33:21', '2023-12-01 14:50:47'),
+(8, 'Laravel Web Application Development Challenge', 2, '2023-12-02', '01:00', 1, 40, 40, 'exid6569e0c873a08', 0, NULL, '2023-12-01 13:34:00', '2023-12-01 14:51:03'),
+(9, 'MongoDB Expertise Certification', 3, '2023-12-02', '01:00', 1, 35, 70, 'exid6569e0da5e65d', 0, NULL, '2023-12-01 13:34:18', '2023-12-01 14:51:28');
 
 -- --------------------------------------------------------
 
@@ -173,20 +219,6 @@ CREATE TABLE `exams_answers` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `exams_answers`
---
-
-INSERT INTO `exams_answers` (`id`, `attempt_id`, `question_id`, `answer_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 2, 8, '2023-10-12 08:27:15', '2023-10-12 08:27:15'),
-(2, 1, 5, 19, '2023-10-12 08:27:15', '2023-10-12 08:27:15'),
-(3, 1, 4, 14, '2023-10-12 08:27:15', '2023-10-12 08:27:15'),
-(4, 1, 3, 9, '2023-10-12 08:27:15', '2023-10-12 08:27:15'),
-(5, 2, 2, 5, '2023-10-12 12:09:28', '2023-10-12 12:09:28'),
-(6, 2, 4, 15, '2023-10-12 12:09:28', '2023-10-12 12:09:28'),
-(7, 2, 5, 18, '2023-10-12 12:09:29', '2023-10-12 12:09:29'),
-(8, 2, 3, 12, '2023-10-12 12:09:29', '2023-10-12 12:09:29');
 
 -- --------------------------------------------------------
 
@@ -204,14 +236,6 @@ CREATE TABLE `exams_attempt` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `exams_attempt`
---
-
-INSERT INTO `exams_attempt` (`id`, `exam_id`, `user_id`, `status`, `marks`, `created_at`, `updated_at`) VALUES
-(1, 34, 6, 0, 5, '2023-10-12 08:27:15', '2023-10-13 01:02:40'),
-(2, 34, 6, 1, 10, '2023-10-12 12:09:28', '2023-10-13 01:07:57');
-
 -- --------------------------------------------------------
 
 --
@@ -226,14 +250,6 @@ CREATE TABLE `exam_payments` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_id` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `exam_payments`
---
-
-INSERT INTO `exam_payments` (`id`, `exam_id`, `user_id`, `payment_details`, `created_at`, `updated_id`) VALUES
-(1, 39, 6, '{\"razorpay_order_id\":\"order_MpL6c5coSIKsJr\",\"razorpay_payment_id\":\"pay_MpL6wM5fWSntdu\",\"razorpay_signature\":\"c64c81e87bfa316459151769fd75bfa3aadf154ee849d3ea004d5e54790ca1b3\"}', '2023-10-17 16:26:52', '2023-10-17 16:26:52'),
-(2, 37, 6, '{\"PayerID\":\"4C7HX2NA4E3ZG\"}', '2023-10-17 16:27:30', '2023-10-17 16:27:30');
 
 -- --------------------------------------------------------
 
@@ -272,6 +288,29 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `packages`
+--
+
+CREATE TABLE `packages` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `exam_id` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`exam_id`)),
+  `price` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`price`)),
+  `expiry` date DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `packages`
+--
+
+INSERT INTO `packages` (`id`, `name`, `exam_id`, `price`, `expiry`, `created_at`, `updated_at`) VALUES
+(1, 'Advanced Course', '[7,8,9]', '{\"INR\":\"5000\",\"USD\":\"250\"}', '2024-12-31', '2023-12-01 13:35:44', '2023-12-01 13:35:53');
 
 -- --------------------------------------------------------
 
@@ -322,27 +361,33 @@ CREATE TABLE `qna_exams` (
 --
 
 INSERT INTO `qna_exams` (`id`, `exam_id`, `question_id`, `created_at`, `updated_at`) VALUES
-(3, 14, 5, '2023-10-08 12:46:33', '2023-10-08 12:46:33'),
-(4, 15, 2, '2023-10-08 15:03:30', '2023-10-08 15:03:30'),
-(6, 15, 4, '2023-10-08 15:03:31', '2023-10-08 15:03:31'),
-(9, 17, 16, '2023-10-09 13:33:22', '2023-10-09 13:33:22'),
-(10, 21, 2, '2023-10-09 16:31:34', '2023-10-09 16:31:34'),
-(11, 21, 3, '2023-10-09 16:31:34', '2023-10-09 16:31:34'),
-(12, 21, 4, '2023-10-09 16:31:35', '2023-10-09 16:31:35'),
-(13, 21, 5, '2023-10-09 16:31:35', '2023-10-09 16:31:35'),
-(14, 20, 18, '2023-10-09 16:32:15', '2023-10-09 16:32:15'),
-(15, 20, 19, '2023-10-09 16:32:15', '2023-10-09 16:32:15'),
-(16, 20, 20, '2023-10-09 16:32:15', '2023-10-09 16:32:15'),
-(18, 23, 11, '2023-10-12 12:14:30', '2023-10-12 12:14:30'),
-(19, 23, 12, '2023-10-12 12:14:30', '2023-10-12 12:14:30'),
-(20, 23, 13, '2023-10-12 12:14:31', '2023-10-12 12:14:31'),
-(21, 22, 16, '2023-10-12 12:16:33', '2023-10-12 12:16:33'),
-(22, 22, 17, '2023-10-12 12:16:33', '2023-10-12 12:16:33'),
-(23, 34, 7, '2023-10-12 13:12:28', '2023-10-12 13:12:28'),
-(24, 34, 8, '2023-10-12 13:12:29', '2023-10-12 13:12:29'),
-(25, 34, 9, '2023-10-12 13:12:29', '2023-10-12 13:12:29'),
-(26, 34, 13, '2023-10-12 13:12:29', '2023-10-12 13:12:29'),
-(27, 34, 14, '2023-10-12 13:12:29', '2023-10-12 13:12:29');
+(1, 1, 1, '2023-12-01 14:41:41', '2023-12-01 14:41:41'),
+(2, 1, 2, '2023-12-01 14:41:42', '2023-12-01 14:41:42'),
+(3, 1, 3, '2023-12-01 14:41:42', '2023-12-01 14:41:42'),
+(4, 2, 4, '2023-12-01 14:42:05', '2023-12-01 14:42:05'),
+(5, 2, 5, '2023-12-01 14:42:05', '2023-12-01 14:42:05'),
+(6, 2, 6, '2023-12-01 14:42:05', '2023-12-01 14:42:05'),
+(7, 3, 7, '2023-12-01 14:42:34', '2023-12-01 14:42:34'),
+(8, 3, 8, '2023-12-01 14:42:34', '2023-12-01 14:42:34'),
+(9, 3, 9, '2023-12-01 14:42:34', '2023-12-01 14:42:34'),
+(10, 4, 10, '2023-12-01 14:43:20', '2023-12-01 14:43:20'),
+(11, 4, 11, '2023-12-01 14:43:20', '2023-12-01 14:43:20'),
+(12, 4, 12, '2023-12-01 14:43:42', '2023-12-01 14:43:42'),
+(13, 5, 13, '2023-12-01 14:44:05', '2023-12-01 14:44:05'),
+(14, 5, 14, '2023-12-01 14:44:24', '2023-12-01 14:44:24'),
+(15, 5, 15, '2023-12-01 14:44:42', '2023-12-01 14:44:42'),
+(16, 6, 16, '2023-12-01 14:45:03', '2023-12-01 14:45:03'),
+(17, 6, 17, '2023-12-01 14:45:22', '2023-12-01 14:45:22'),
+(18, 6, 18, '2023-12-01 14:45:40', '2023-12-01 14:45:40'),
+(19, 7, 21, '2023-12-01 14:46:05', '2023-12-01 14:46:05'),
+(20, 7, 22, '2023-12-01 14:46:05', '2023-12-01 14:46:05'),
+(21, 7, 23, '2023-12-01 14:46:05', '2023-12-01 14:46:05'),
+(25, 8, 24, '2023-12-01 14:47:47', '2023-12-01 14:47:47'),
+(26, 8, 25, '2023-12-01 14:47:47', '2023-12-01 14:47:47'),
+(27, 8, 26, '2023-12-01 14:47:47', '2023-12-01 14:47:47'),
+(28, 9, 27, '2023-12-01 14:48:32', '2023-12-01 14:48:32'),
+(29, 9, 28, '2023-12-01 14:48:32', '2023-12-01 14:48:32'),
+(30, 9, 29, '2023-12-01 14:48:32', '2023-12-01 14:48:32');
 
 -- --------------------------------------------------------
 
@@ -363,24 +408,38 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `question`, `explaination`, `created_at`, `updated_at`) VALUES
-(2, 'Who was lead actor in kabir singh?', 'This is a bollywood movie.', '2023-10-02 06:34:09', '2023-10-02 06:34:09'),
-(3, 'What is the capital of France?', 'Capital city of Spain', '2023-10-02 06:36:07', '2023-10-02 06:36:07'),
-(4, 'What gas do plants primarily absorb from the atmosphere during photosynthesis?', NULL, '2023-10-02 06:36:42', '2023-10-02 06:36:42'),
-(5, 'Who is the author of the famous novel \"To Kill a Mockingbird\"?', NULL, '2023-10-02 06:37:17', '2023-10-02 06:37:17'),
-(6, 'What is the chemical symbol for gold?', NULL, '2023-10-02 06:37:54', '2023-10-02 10:16:32'),
-(7, 'Which planet in our solar system is known as the \"Red Planet\"?', NULL, '2023-10-02 06:38:24', '2023-10-02 06:38:24'),
-(8, 'What is the largest mammal on Earth?', NULL, '2023-10-02 06:38:59', '2023-10-02 06:38:59'),
-(9, 'Who painted the Mona Lisa?', NULL, '2023-10-02 06:39:28', '2023-10-02 06:39:28'),
-(10, 'Which of the following is not a primary color in subtractive color mixing?', NULL, '2023-10-02 06:39:57', '2023-10-02 06:39:57'),
-(11, 'What is the smallest prime number?', NULL, '2023-10-02 06:40:16', '2023-10-02 06:40:16'),
-(12, 'Which gas is responsible for the Earth\'s ozone layer depletion?', NULL, '2023-10-02 06:40:46', '2023-10-02 06:40:46'),
-(13, 'What is the powerhouse of the cell?', 'It is a biology question.', '2023-10-02 06:41:14', '2023-10-13 07:10:40'),
-(14, 'Who is known as the father of modern physics and formulated the theory of relativity?', NULL, '2023-10-02 06:42:02', '2023-10-02 06:42:02'),
-(16, 'ORM in laravel stands for?', NULL, '2023-10-03 10:40:12', '2023-10-03 10:40:12'),
-(17, 'Which of the following conditional statements is used to test multiple conditions', NULL, '2023-10-03 18:02:40', '2023-10-03 12:34:11'),
-(18, 'Which of the following attributes is not used with the IMG tag', NULL, '2023-10-03 18:02:40', '2023-10-08 06:29:00'),
-(19, 'Which of the following is not a communication service of the Internet?', NULL, '2023-10-03 18:02:40', '2023-10-03 18:02:40'),
-(20, 'MongoDB is a which type of NoSQL?', NULL, '2023-10-09 14:40:41', '2023-10-09 14:40:41');
+(1, 'What is the purpose of the `finally` block in Java exception handling?', 'To execute code regardless of whether an exception occurs or not', '2023-12-01 13:44:58', '2023-12-01 13:44:58'),
+(2, 'What is the difference between `ArrayList` and `LinkedList` in Java?', 'ArrayList is faster for random access, LinkedList is faster for insertions and deletions', '2023-12-01 13:45:00', '2023-12-01 13:45:51'),
+(3, 'Which design pattern is commonly used in Java for object creation and is specifically used to control the instantiation process?', NULL, '2023-12-01 13:46:26', '2023-12-01 13:46:26'),
+(4, 'What is the purpose of the Java Persistence API (JPA) in Java EE applications?', 'To define a standard for ORM (Object-Relational Mapping)', '2023-12-01 13:47:16', '2023-12-01 13:47:16'),
+(5, 'In Java EE, what is the role of the Enterprise JavaBeans (EJB) technology?', NULL, '2023-12-01 13:47:53', '2023-12-01 13:47:53'),
+(6, 'What is the purpose of the Java Message Service (JMS) in Java EE?', NULL, '2023-12-01 13:48:31', '2023-12-01 13:48:31'),
+(7, 'In Laravel, what is the purpose of the artisan command-line tool?', NULL, '2023-12-01 13:49:12', '2023-12-01 13:49:12'),
+(8, 'What is Laravel\'s Blade templating engine used for?', 'To write and manage views in a concise syntax', '2023-12-01 13:49:49', '2023-12-01 13:49:49'),
+(9, 'Which Laravel Eloquent relationship type is used when a model is related to another model through an intermediate table?', NULL, '2023-12-01 13:50:28', '2023-12-01 13:50:28'),
+(10, 'What is the purpose of Laravel\'s Eloquent ORM?', 'To provide an interface for querying the database using an object-oriented syntax', '2023-12-01 13:51:13', '2023-12-01 13:51:13'),
+(11, 'In Laravel, what is the purpose of a middleware?', 'To filter HTTP requests entering the application', '2023-12-01 13:51:54', '2023-12-01 13:51:54'),
+(12, 'Which artisan command is used to create a new migration in Laravel?', NULL, '2023-12-01 13:52:37', '2023-12-01 13:52:37'),
+(13, 'In MongoDB, what is a document?', 'A JSON-like data structure used to store data', '2023-12-01 13:53:20', '2023-12-01 13:53:20'),
+(14, 'Which of the following is a primary advantage of using MongoDB over traditional relational databases?', NULL, '2023-12-01 13:53:48', '2023-12-01 13:53:48'),
+(15, 'What is the purpose of the _id field in a MongoDB document?', NULL, '2023-12-01 13:54:29', '2023-12-01 13:54:29'),
+(16, 'What is sharding in MongoDB?', 'A technique for dividing a large database into smaller, more manageable parts', '2023-12-01 13:55:14', '2023-12-01 13:55:14'),
+(17, 'Which MongoDB aggregation pipeline stage is used to group documents by a specified expression?', NULL, '2023-12-01 13:55:48', '2023-12-01 13:55:48'),
+(18, 'In MongoDB, what is an index?', 'A data structure that improves the speed of data retrieval operations', '2023-12-01 13:56:18', '2023-12-01 13:56:18'),
+(21, 'What is the purpose of the Java Naming and Directory Interface (JNDI) in JavaEE?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:30:30'),
+(22, 'In JavaEE, what is the role of the Java Authentication and Authorization Service (JAAS)?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:31:04'),
+(23, 'Which JavaEE component is responsible for managing the flow of control in a Java web application?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:31:17'),
+(24, 'What is the purpose of Laravel\'s Eloquent belongsTo relationship?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:31:34'),
+(25, 'How can you protect routes in Laravel from unauthorized access?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:31:50'),
+(26, 'What is the purpose of Laravel\'s Blade directive @yield?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:32:08'),
+(27, 'What is the role of the WiredTiger storage engine in MongoDB?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:32:22'),
+(28, 'How does MongoDB handle horizontal scaling?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:32:41'),
+(29, 'What is the purpose of the MongoDB find method?', NULL, '2023-12-01 14:29:06', '2023-12-01 14:32:52'),
+(30, 'Which of the following conditional statements is used to test multiple conditions', NULL, '2023-12-01 14:34:25', '2023-12-01 14:35:01'),
+(31, 'Which of the following attributes is not used with the <IMG> tag', NULL, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(32, 'Which of the following is not a communication service of the Internet?', NULL, '2023-12-01 14:34:25', '2023-12-01 14:34:25'),
+(33, 'demo question', NULL, '2023-12-01 14:36:12', '2023-12-01 14:36:42'),
+(34, 'In which year was MongoDB developed?', NULL, '2023-12-01 15:09:38', '2023-12-01 15:09:38');
 
 -- --------------------------------------------------------
 
@@ -391,6 +450,7 @@ INSERT INTO `questions` (`id`, `question`, `explaination`, `created_at`, `update
 CREATE TABLE `subjects` (
   `id` int(11) NOT NULL,
   `subject` varchar(255) NOT NULL,
+  `sub_code` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -399,25 +459,10 @@ CREATE TABLE `subjects` (
 -- Dumping data for table `subjects`
 --
 
-INSERT INTO `subjects` (`id`, `subject`, `created_at`, `updated_at`) VALUES
-(1, 'Advanced Programming in Java', '2023-09-26 09:10:36', '2023-09-26 09:10:36'),
-(2, 'Programming in Java', '2023-09-26 09:33:01', '2023-09-26 09:33:01'),
-(3, 'Python Programming', '2023-09-26 09:38:53', '2023-09-26 09:38:53'),
-(5, 'Programming with ASP.Net', '2023-09-26 09:42:36', '2023-09-26 09:42:36'),
-(6, 'App Development in Android', '2023-09-26 09:43:16', '2023-09-26 09:43:16'),
-(7, 'Programming in C#', '2023-09-26 09:43:38', '2023-09-26 09:43:38'),
-(8, 'Unix and Shell Programming', '2023-09-26 09:44:06', '2023-09-26 06:51:17'),
-(9, 'Network Administration and Programming', '2023-09-26 09:44:42', '2023-09-26 09:44:42'),
-(10, 'OOP using C++', '2023-09-26 09:45:01', '2023-09-26 09:45:01'),
-(11, 'Oracle with RDBMS', '2023-09-26 09:45:24', '2023-09-26 09:45:24'),
-(12, 'CMS using Wordpress', '2023-09-26 09:45:41', '2023-09-26 09:45:41'),
-(13, 'Programming & Data Structures in C', '2023-09-26 09:46:19', '2023-09-26 06:53:44'),
-(14, 'Fundamentals of Website Design & Development', '2023-09-26 09:47:03', '2023-09-26 09:47:03'),
-(15, 'Software Designing & Testing', '2023-09-26 09:47:39', '2023-09-26 07:15:48'),
-(17, 'Introduction to NoSQL: MongoDB', '2023-10-03 10:30:20', '2023-10-03 10:30:20'),
-(18, 'Advanced Web Programming in Laravel', '2023-10-03 10:34:11', '2023-10-03 10:34:11'),
-(19, 'Demo Subject', '2023-10-08 12:02:08', '2023-10-08 12:02:08'),
-(20, 'Database Programming in MongoDB', '2023-10-08 17:05:04', '2023-10-08 17:05:04');
+INSERT INTO `subjects` (`id`, `subject`, `sub_code`, `created_at`, `updated_at`) VALUES
+(1, 'APPLICATION DEVEL. USING ADVANCE JAVA', 'CS-01', '2023-12-01 13:26:23', '2023-12-01 13:26:23'),
+(2, 'ADVANCE WEB DEVELOPMENT IN LARAVEL', 'CS-02', '2023-12-01 13:26:36', '2023-12-01 13:26:36'),
+(3, 'NOSQL DATABASE : MONGODB', 'CS-03', '2023-12-01 13:26:52', '2023-12-01 13:26:52');
 
 -- --------------------------------------------------------
 
@@ -429,6 +474,7 @@ CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `profile_pic` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `is_admin` tinyint(1) NOT NULL DEFAULT 0,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -441,11 +487,13 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `is_admin`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(3, 'anshu', 'anshujoshi@proton.me', NULL, 1, '$2y$10$J4B3hCa5Ll2jeJ5cHjMaRuLkQ5aNNK5BfdqDVaqLTKNf06vuCAf/m', NULL, '2023-09-23 07:31:01', '2023-09-25 23:54:04'),
-(4, 'Kreet', 'KreetJoshi.312@gmail.com', NULL, 0, '$2y$10$N4DnbaHJnXxh9gQQ8HrFaui0CgHB32zy7XjNr4wHyY6bRuo7QMRBK', NULL, '2023-09-24 07:28:33', '2023-09-24 07:31:26'),
-(6, 'Anshuman Singh', 'joshianshu045@gmail.com', NULL, 0, '$2y$10$uOipd/bNAzLSRB.VLsvuA.qp.ASo6GdKkMGNfE5mYxMZLRwfFlwTG', NULL, '2023-10-03 05:15:29', '2023-10-09 09:17:28'),
-(7, 'Krith Joshi', 'joshikreet.312@gmail.com', NULL, 0, '$2y$10$.KtKESI5xhc0DbKgGiMmvedkmwgixaoWFEoQ2r4cCZhGYsDbdgkRy', NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `name`, `email`, `profile_pic`, `email_verified_at`, `is_admin`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Anshu Joshi', 'anshujoshi@proton.me', 'admin.jpg', NULL, 1, '$2y$10$5LZafQz10tmMEoyepj3RT.OBkVttGb8VieVUI1DsMHknT4Rdfdday', NULL, '2023-12-01 13:24:29', '2023-12-01 13:24:29'),
+(2, 'Aarav Sharma', 'aarav.sharma@example.com', NULL, NULL, 0, '$2y$10$.W7PgySqaZXLkSzWEy14DeoW1ZbdcrNtr94b7WuerZKvHCuk8LFVC', NULL, '2023-12-01 14:55:13', '2023-12-01 14:55:13'),
+(3, 'Riya Patel', 'riya.patel@example.com', NULL, NULL, 0, '$2y$10$epavXa5MLqMqnRfYUAWC5eenRSU/mIJvJBjRxwEwriDsO9yf0BfQ.', NULL, '2023-12-01 14:55:36', '2023-12-01 14:55:36'),
+(4, 'Arjun Singh', 'arjun.singh@example.com', NULL, NULL, 0, '$2y$10$KSC50c5q.aEQ0k.MHlrnQ.TYPZFimKj.k.7i8H47qnYpSz9knodbW', NULL, '2023-12-01 14:55:54', '2023-12-01 14:55:54'),
+(5, 'Aisha Verma', 'aisha.verma@example.com', NULL, NULL, 0, '$2y$10$7aZYLAJzoQxBsJRuvUGIMOxg3Mdnnkz0pkn131qbeBW0teZUXoLt2', NULL, '2023-12-01 14:56:12', '2023-12-01 14:56:12'),
+(6, 'Ansh Joshi', 'joshianshu045@gmail.com', NULL, NULL, 0, '$2y$10$pODBHAdZh13dnHZsEq115e9BhnE.mD.uapgYYrX5R8ijvkk1KVhhG', NULL, '2023-12-01 14:56:35', '2023-12-01 14:56:35');
 
 --
 -- Indexes for dumped tables
@@ -495,6 +543,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `packages`
+--
+ALTER TABLE `packages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -541,25 +595,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT for table `exams`
 --
 ALTER TABLE `exams`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `exams_answers`
 --
 ALTER TABLE `exams_answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `exams_attempt`
 --
 ALTER TABLE `exams_attempt`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `exam_payments`
@@ -580,6 +634,12 @@ ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `packages`
+--
+ALTER TABLE `packages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
@@ -589,25 +649,25 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `qna_exams`
 --
 ALTER TABLE `qna_exams`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

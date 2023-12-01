@@ -50,8 +50,8 @@
                                 </thead>
                                 <tbody>
                                     @if (count($attempts) > 0)
-                                    @php $x = 1; @endphp
-                                    @foreach ($attempts as $attempt)
+										@php $x = 1; @endphp
+										@foreach ($attempts as $attempt)
                                         <tr>
                                             <td>{{ $x++ }}</td>
                                             <td>{{ $attempt->user->name }}</td>
@@ -71,7 +71,7 @@
                                                 @endif
                                             </td>
                                         </tr>  
-                                    @endforeach
+										@endforeach
                                     @else
                                     <tr>
                                         <td colspan="6" class="text-muted">No Students Found!</td>

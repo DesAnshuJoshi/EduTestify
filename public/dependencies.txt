@@ -24,8 +24,10 @@ MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=anshujoshi045@gmail.com
 MAIL_FROM_NAME="${APP_NAME}"
 
-razorpay=joshianshu045@gmail.com
-paypal=
+razorpay=joshianshu045@gmail.com.
+
+
+paypal= sb-7yi4n27839386@personal.example.com	|	<PV<3t$l
 
 Below terminal commands can be used if payment gateways don't work/or shows authentication error.
 php artisan cache:clear

@@ -35,7 +35,7 @@ class QnaImport implements ToModel
                     }
 
                     Answer::insert([
-                        'question_id' => $questionId,
+                        'questions_id' => $questionId,
                         'answer' => $row[$i],
                         'is_correct' => $is_correct
                     ]);
